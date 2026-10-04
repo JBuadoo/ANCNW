@@ -4,237 +4,314 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Nations Church NorthWest | House of Grace</title>
-  <meta name="description" content="All Nations Church NorthWest — House of Grace. A welcoming, multicultural church in Seattle/Burien, WA. Restoring people and releasing their potential by connecting them to God.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232B5FD9'><path d='M12 2L15 8H9L12 2Z'/><path d='M11 9H13V22H11V9Z'/><path d='M4 11H20V13H4V11Z'/></svg>">
+  <meta name="description" content="All Nations Church NorthWest — House of Grace. A multicultural church in Burien, WA. Sunday worship at 10:00 AM. Restoring people and releasing their potential by connecting them to God.">
+  <meta name="theme-color" content="#262423">
+  <link rel="icon" type="image/png" href="assets/images/logo-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Mr+Dafoe&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/images/series-mature-in-service.jpg">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <!-- ============================================================
-     HEADER — Oasis-style: centered logo, nav on both sides
+     HEADER
      ============================================================ -->
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
-    <!-- Left nav group -->
-    <nav class="nav-group" aria-label="Primary left">
-      <a href="#home" data-route="home" class="nav-link active">Home</a>
+    <a href="#home" data-route="home" class="brand" aria-label="All Nations Church NorthWest — Home">
+      <img src="assets/images/logo-mark.png" alt="" class="brand__mark" width="194" height="160">
+      <span class="brand__text">
+        <span class="brand__name">All Nations Church</span>
+        <span class="brand__sub">NorthWest &middot; House of Grace</span>
+      </span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="#home" data-route="home" class="nav-link">Home</a>
       <a href="#about" data-route="about" class="nav-link">About</a>
       <a href="#ministries" data-route="ministries" class="nav-link">Ministries</a>
       <a href="#sermons" data-route="sermons" class="nav-link">Sermons</a>
-    </nav>
-
-    <!-- Center brand -->
-    <a href="#home" data-route="home" class="header-brand">
-      <img src="assets/images/logo.png" alt="ANCNW Logo" class="header-logo" onerror="this.style.display='none'">
-      <div class="header-brand-text">
-        <span class="header-brand-name">All Nations Church</span>
-        <span class="header-brand-sub">NorthWest · House of Grace</span>
-      </div>
-    </a>
-
-    <!-- Right nav group -->
-    <nav class="nav-group" aria-label="Primary right">
-      <a href="#events" data-route="events" class="nav-link">Events</a>
       <a href="#gallery" data-route="gallery" class="nav-link">Gallery</a>
-      <a href="#connect" data-route="connect" class="nav-link">Connect</a>
       <a href="#contact" data-route="contact" class="nav-link">Contact</a>
     </nav>
 
-    <!-- CTA -->
-    <div class="header-cta">
-      <a href="#connect" data-route="connect" data-subtab="visit" class="btn btn--outline btn--sm" style="color:#fff;border-color:rgba(255,255,255,0.3);">Visit Us</a>
-      <a href="#give" data-route="give" class="btn btn--primary btn--sm">Give</a>
-    </div>
+    <a href="#give" data-route="give" class="btn btn--light btn--sm header-visit">Give</a>
 
-    <!-- Mobile toggle -->
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
-      <span></span><span></span><span></span>
+    <button class="menu-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+      <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+      <span class="menu-toggle__label">Menu</span>
     </button>
   </div>
 </header>
 
 <!-- Mobile Drawer -->
 <div class="drawer-overlay" id="drawerOverlay"></div>
-<aside class="mobile-drawer" id="mobileDrawer">
+<aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu">
   <div class="drawer-header">
-    <div class="header-brand-text">
-      <span class="header-brand-name" style="font-size:0.85rem;">All Nations Church</span>
-      <span class="header-brand-sub">House of Grace</span>
-    </div>
-    <button class="drawer-close" id="drawerClose">&times;</button>
+    <span class="drawer-header__title">Menu</span>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
   </div>
   <ul class="mobile-menu">
-    <li><a href="#home" data-route="home" class="mobile-link active">Home</a></li>
+    <li><a href="#home" data-route="home" class="mobile-link">Home</a></li>
+    <li><a href="#visit" data-route="visit" data-subtab="visit" class="mobile-link">Plan Your Visit</a></li>
     <li><a href="#about" data-route="about" class="mobile-link">About</a></li>
     <li><a href="#ministries" data-route="ministries" class="mobile-link">Ministries</a></li>
     <li><a href="#sermons" data-route="sermons" class="mobile-link">Sermons</a></li>
-    <li><a href="#events" data-route="events" class="mobile-link">Events</a></li>
     <li><a href="#gallery" data-route="gallery" class="mobile-link">Gallery</a></li>
-    <li><a href="#connect" data-route="connect" class="mobile-link">Connect</a></li>
     <li><a href="#give" data-route="give" class="mobile-link">Give</a></li>
     <li><a href="#contact" data-route="contact" class="mobile-link">Contact</a></li>
   </ul>
-  <div class="mobile-drawer-cta">
-    <a href="#connect" data-route="connect" data-subtab="visit" class="btn btn--primary btn--full">Plan Your Visit</a>
-    <a href="#give" data-route="give" class="btn btn--outline btn--full" style="color:#fff;border-color:rgba(255,255,255,0.25);">Give Online</a>
+  <div class="drawer-times">
+    <p class="eyebrow eyebrow--light">This Week</p>
+    <dl>
+      <div><dt>Sunday Worship</dt><dd>10:00 AM</dd></div>
+      <div><dt>Bible Study &middot; Zoom</dt><dd>1st &amp; 3rd Wed, 8–9 PM</dd></div>
+      <div><dt>Prayer Meeting</dt><dd>Fridays, 7–9 PM</dd></div>
+    </dl>
   </div>
 </aside>
 
+
+<main id="main">
 
 <!-- ============================================================
      HOME
      ============================================================ -->
 <div id="view-home" class="page-view active-view">
 
-  <!-- Hero — Full dark, "Welcome Home" style -->
-  <section class="hero">
-    <div class="hero__bg"><img src="assets/images/hero-sanctuary.jpg" alt="Worship at House of Grace"></div>
-    <div class="hero__content">
-      <p class="hero__eyebrow">All Nations Church NorthWest</p>
-      <h1 class="hero__title">Welcome Home</h1>
-      <p class="hero__sub">A place where every nation, every background, and every story finds grace, community, and purpose in Christ.</p>
-      <div class="hero__actions">
-        <a href="#connect" data-route="connect" data-subtab="visit" class="btn btn--white btn--lg">Plan Your Visit</a>
-        <a href="#sermons" data-route="sermons" class="btn btn--outline btn--lg" style="color:#fff;border-color:rgba(255,255,255,0.3);">Watch &amp; Listen</a>
+  <!-- Splash: series slideshow -->
+  <section class="splash" id="home-top" data-dot="Welcome" aria-roledescription="carousel" aria-label="Current series">
+    <h1 class="visually-hidden">All Nations Church NorthWest — House of Grace</h1>
+    <div class="slides" id="slides">
+      <figure class="slide is-active" aria-roledescription="slide" aria-label="1 of 3">
+        <img src="assets/images/series-mature-in-service.jpg" alt="October series: Mature in Service. 2026, our time of maturity." width="1920" height="1080" fetchpriority="high">
+      </figure>
+      <figure class="slide" aria-roledescription="slide" aria-label="2 of 3">
+        <img src="assets/images/series-maturity.jpg" alt="2026 theme: Maturity. Ephesians 4:14." width="2048" height="1204" loading="lazy">
+      </figure>
+      <figure class="slide" aria-roledescription="slide" aria-label="3 of 3">
+        <img src="assets/images/church-family.jpg" alt="Church members in colorful traditional dress greeting one another outside" width="2000" height="1333" loading="lazy">
+      </figure>
+      <div class="slides__nav">
+        <button class="glass-btn" id="slidePrev" aria-label="Previous slide">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button class="glass-btn" id="slideNext" aria-label="Next slide">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
       </div>
+      <button class="splash__down" data-scroll="#welcome" aria-label="Scroll down to learn more">
+        <svg width="56" height="28" viewBox="0 0 56 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l25 22L53 3"/></svg>
+      </button>
     </div>
-    <div class="hero__scroll-hint">&darr;</div>
-  </section>
-
-  <!-- Service Times -->
-  <div class="service-bar">
-    <div class="container">
-      <div class="service-bar__grid">
-        <div class="service-bar__item">
-          <div class="service-bar__day">Sunday</div>
-          <div class="service-bar__time">10:00 AM</div>
-          <div class="service-bar__name">Worship Service</div>
-        </div>
-        <div class="service-bar__item">
-          <div class="service-bar__day">1st &amp; 3rd Wednesday</div>
-          <div class="service-bar__time">8:00 – 9:00 PM</div>
-          <div class="service-bar__name">Bible Study (Zoom)</div>
-        </div>
-        <div class="service-bar__item">
-          <div class="service-bar__day">Friday</div>
-          <div class="service-bar__time">7:00 – 9:00 PM</div>
-          <div class="service-bar__name">Prayer Meeting (In Person)</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Welcome / About Intro -->
-  <section class="section">
-    <div class="container">
-      <div class="about-intro">
-        <div class="about-intro__image">
-          <img src="assets/images/pastor-preaching.jpg" alt="Pastor Emmanuel teaching">
-        </div>
-        <div class="about-intro__content">
-          <p class="section-label">Welcome</p>
-          <h2>A Place to Belong</h2>
-          <p>At All Nations Church NorthWest, we believe every person is precious to God. We are a multicultural congregation united by the love of Jesus Christ.</p>
-          <p>Whether you are taking your first steps in faith, seeking renewal, or looking for a church family in the greater Seattle area — our doors and hearts are open to you.</p>
-          <div class="about-intro__pillars">
-            <div class="pillar"><span class="pillar__check">✓</span> Grace-Centered Preaching</div>
-            <div class="pillar"><span class="pillar__check">✓</span> Multicultural Worship</div>
-            <div class="pillar"><span class="pillar__check">✓</span> Kids &amp; Youth Programs</div>
-            <div class="pillar"><span class="pillar__check">✓</span> Community Life Groups</div>
-          </div>
-          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
-            <a href="#about" data-route="about" class="btn btn--primary">Our Story</a>
-            <a href="#connect" data-route="connect" class="btn btn--outline">Connect With Us</a>
-          </div>
+    <div class="splash__info-wrap">
+      <div class="container">
+        <div class="splash__info">
+          <p class="eyebrow eyebrow--light">Join Us Sunday</p>
+          <p class="splash__time">Worship at 10:00 AM</p>
+          <p class="splash__where">14200 1st Avenue South, Burien</p>
+          <a href="#visit" data-route="visit" data-subtab="visit" class="link-arrow link-arrow--light">Plan your visit</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Latest Sermon -->
-  <section class="section section--cream">
-    <div class="container">
-      <div class="section-intro centered">
-        <p class="section-label">Latest Message</p>
-        <h2>From the Pulpit</h2>
-      </div>
-      <div class="sermon-featured">
-        <div class="sermon-featured__media">
-          <img src="assets/images/hero-sanctuary.jpg" alt="Sermon">
-          <div class="sermon-featured__play play-sermon" data-id="sermon-1">
-            <div class="play-btn-circle">
-              <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-          </div>
+  <!-- Welcome -->
+  <section class="section welcome" id="welcome" data-dot="About">
+    <div class="container welcome__grid">
+      <div class="welcome__text" data-reveal>
+        <p class="eyebrow">House of Grace</p>
+        <h2>Welcome to All Nations Church NorthWest</h2>
+        <p class="welcome__tagline">A place to come discover.</p>
+        <p class="lead">At All Nations Church NorthWest, we believe every person is precious to God. We are a multicultural congregation united by the love of Jesus Christ.</p>
+        <p>Whether you are taking your first steps in faith, seeking renewal, or looking for a church family in the greater Seattle area, our doors and hearts are open to you.</p>
+        <ul class="tick-list">
+          <li>Grace-centered preaching</li>
+          <li>Multicultural worship</li>
+          <li>Kids &amp; youth programs</li>
+          <li>Community life groups</li>
+        </ul>
+        <div class="btn-row">
+          <a href="#about" data-route="about" class="btn btn--primary">Our Story</a>
+          <a href="#visit" data-route="visit" data-subtab="visit" class="link-arrow">What to expect on Sunday</a>
         </div>
-        <div class="sermon-featured__info">
-          <div class="sermon-featured__series">Unshakable Kingdom</div>
-          <h3 class="sermon-featured__title">Walking in Supernatural Grace</h3>
-          <div class="sermon-featured__meta">
-            <span>Pastor Emmanuel Osei</span>
-            <span>Ephesians 2:8-10</span>
-            <span>42 min</span>
+      </div>
+      <figure class="welcome__figure" data-reveal>
+        <img src="assets/images/church-family-dancing.jpg" alt="Church members in colorful African print dancing together outdoors" loading="lazy" width="2000" height="1333">
+        <figcaption>Our church family.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Service times -->
+  <section class="section section--sand gather" id="gather" data-dot="Service Times">
+    <div class="container gather__grid">
+      <div class="gather__intro" data-reveal>
+        <p class="eyebrow">Service Times</p>
+        <h2>Gather with us</h2>
+        <p>There are three regular ways to worship, study, and pray with our church family each month. You are welcome at all of them.</p>
+        <address class="gather__address">
+          <span class="label">Location</span>
+          14200 1st Avenue South<br>Burien, WA 98168
+        </address>
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=14200+1st+Avenue+South+Burien+WA+98168" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <ol class="times" data-reveal>
+        <li class="times__row">
+          <div class="times__when">
+            <span class="times__day">Every Sunday</span>
+            <span class="times__time">10:00 AM</span>
           </div>
-          <p class="sermon-featured__desc">Grace is not just unmerited pardon — it is God's empowering presence enabling you to do what you could never do on your own.</p>
-          <div class="sermon-featured__actions">
-            <button class="btn btn--white btn--sm play-sermon" data-id="sermon-1">Listen Now</button>
-            <a href="#sermons" data-route="sermons" class="btn btn--outline btn--sm" style="color:#fff;border-color:rgba(255,255,255,0.3);">All Sermons</a>
+          <div class="times__what">
+            <h3>Sunday Worship Service</h3>
+            <p>Worship, Bible teaching, and prayer for the whole family. Kingdom Kids is available for nursery through 5th grade.</p>
+            <span class="tag">In person</span>
+          </div>
+        </li>
+        <li class="times__row">
+          <div class="times__when">
+            <span class="times__day">1st &amp; 3rd Wednesday</span>
+            <span class="times__time">8:00 – 9:00 PM</span>
+          </div>
+          <div class="times__what">
+            <h3>Bible Study</h3>
+            <p>An interactive study of Scripture held online on the first and third Wednesday of every month. Contact the church office for the Zoom link.</p>
+            <span class="tag tag--blue">On Zoom</span>
+          </div>
+        </li>
+        <li class="times__row">
+          <div class="times__when">
+            <span class="times__day">Every Friday</span>
+            <span class="times__time">7:00 – 9:00 PM</span>
+          </div>
+          <div class="times__what">
+            <h3>Prayer Meeting</h3>
+            <p>An evening of prayer for our church, our families, our city, and the nations.</p>
+            <span class="tag">In person</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Upcoming events -->
+  <section class="section" id="home-events" data-dot="Events">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="eyebrow">What's Coming Up</p>
+          <h2>Upcoming events</h2>
+        </div>
+      </div>
+      <ul class="event-list" id="homeEvents" data-reveal></ul>
+    </div>
+  </section>
+
+  <!-- Ministries -->
+  <section class="section section--dark ministries-feature" id="home-ministries" data-dot="Ministries">
+    <div class="container ministries-feature__grid">
+      <figure class="ministries-feature__figure" data-reveal>
+        <img src="assets/images/worship-team.jpg" alt="The worship team leading a Sunday service" loading="lazy">
+      </figure>
+      <div class="ministries-feature__text" data-reveal>
+        <p class="eyebrow eyebrow--light">Ministries</p>
+        <h2>Find your place to grow and serve</h2>
+        <p>There is a ministry for every season of life, from Kingdom Kids on Sunday mornings to Saturday breakfasts with Men of Valour.</p>
+        <ul class="ministry-index" id="homeMinistries"></ul>
+        <a href="#ministries" data-route="ministries" class="btn btn--ghost-light">Explore all ministries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pastors -->
+  <section class="section pastor" id="home-pastor" data-dot="Our Pastors">
+    <div class="container pastor__grid">
+      <div class="pastor__text" data-reveal>
+        <p class="eyebrow">From Our Pastors</p>
+        <h2>“There is room for you here.”</h2>
+        <p>We started All Nations Church with a simple conviction: the church should look like heaven will, with people from every tribe, tongue, and nation worshipping together as one family.</p>
+        <p>If you are new to faith, new to Seattle, or simply looking for a church to call home, we would love to meet you. Come as you are, and stay for coffee afterwards so we can say hello.</p>
+        <p class="pastor__sign">Joseph &amp; Frank</p>
+        <p class="pastor__names">Joseph Buadoo &amp; Frank Fening<br><span>Lead Pastors &amp; Founders</span></p>
+        <a href="#about" data-route="about" data-scrollto="leadership" class="link-arrow">Meet our leadership team</a>
+      </div>
+      <figure class="pastor__figure" data-reveal>
+        <img src="assets/images/pastor.jpg" alt="One of our pastors speaking with a microphone at an outdoor church gathering" loading="lazy" width="2000" height="1333">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Mission & vision -->
+  <section class="section section--dark mission" id="home-mission" data-dot="Mission">
+    <div class="container">
+      <div class="mission__statement" data-reveal>
+        <p class="eyebrow eyebrow--light">Our Mission</p>
+        <p class="mission__quote">Restoring people and releasing their potential by connecting them to God.</p>
+      </div>
+      <div class="mission__vision" data-reveal>
+        <p class="eyebrow eyebrow--light">Our Vision &mdash; We aim to</p>
+        <ol class="pillars">
+          <li class="pillars__item pillars__item--blue">
+            <span class="pillars__num">01</span>
+            <h3>Expose</h3>
+            <p>people to the truth of God's Word.</p>
+          </li>
+          <li class="pillars__item pillars__item--orange">
+            <span class="pillars__num">02</span>
+            <h3>Enable</h3>
+            <p>them to grow in faith and character.</p>
+          </li>
+          <li class="pillars__item pillars__item--red">
+            <span class="pillars__num">03</span>
+            <h3>Equip</h3>
+            <p>them for service in the church and the world.</p>
+          </li>
+          <li class="pillars__item pillars__item--plum">
+            <span class="pillars__num">04</span>
+            <h3>Enrich</h3>
+            <p>their lives, families, and communities.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest sermon -->
+  <section class="section section--sand section--tight" id="home-sermon">
+    <div class="container">
+      <div class="latest" data-reveal>
+        <button class="latest__media play-sermon" data-id="sermon-1" aria-label="Play: Walking in Supernatural Grace">
+          <img src="assets/images/hero-sanctuary.jpg" alt="" loading="lazy">
+          <span class="play-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <div class="latest__info">
+          <p class="eyebrow">Latest Message &middot; Unshakable Kingdom</p>
+          <h3>Walking in Supernatural Grace</h3>
+          <p class="meta-line">Pastor Emmanuel Osei <span>Ephesians 2:8–10</span> <span>42 min</span></p>
+          <p>Grace is not just unmerited pardon. It is God's empowering presence, enabling you to do what you could never do on your own.</p>
+          <div class="btn-row">
+            <button class="btn btn--primary btn--sm play-sermon" data-id="sermon-1">Listen now</button>
+            <a href="#sermons" data-route="sermons" class="link-arrow">All sermons</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ministries Teaser -->
-  <section class="section">
-    <div class="container">
-      <div class="section-intro centered">
-        <p class="section-label">Get Involved</p>
-        <h2>Ministries</h2>
-        <p>Grow deeper and build lasting connections through our community ministries.</p>
-      </div>
-      <div class="ministries-grid" id="homeMinistriesGrid"></div>
-      <div style="text-align:center;margin-top:var(--space-lg);">
-        <a href="#ministries" data-route="ministries" class="btn btn--dark">Explore All Ministries</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section section--cream">
-    <div class="container">
-      <div class="section-intro centered">
-        <p class="section-label">Community</p>
-        <h2>What People Are Saying</h2>
-      </div>
-      <div class="testimonials-row">
-        <div class="testimonial">
-          <p class="testimonial__quote">"From the moment my family walked through the doors, we felt embraced. People from every corner of the earth worshipping as one family."</p>
-          <div class="testimonial__author">David &amp; Rebecca Adeyemi</div>
-          <div class="testimonial__role">Members since 2021</div>
-        </div>
-        <div class="testimonial">
-          <p class="testimonial__quote">"The preaching is biblically sound and deeply practical. In a busy city, ANCNW is our sanctuary of peace and real community."</p>
-          <div class="testimonial__author">Michael &amp; Jessica Tremblay</div>
-          <div class="testimonial__role">Life Group Leaders</div>
-        </div>
-        <div class="testimonial">
-          <p class="testimonial__quote">"The youth ministry changed my son's life. He found godly friends, passionate mentors, and a genuine love for Jesus."</p>
-          <div class="testimonial__author">Grace Mwangi</div>
-          <div class="testimonial__role">Parent &amp; Volunteer</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Banner -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Join Us This Sunday</h2>
-      <p>Whether it's your first visit or you've been here for years, there's always room at the table.</p>
-      <div class="cta-banner__actions">
-        <a href="#connect" data-route="connect" data-subtab="visit" class="btn btn--white btn--lg">Plan Your Visit</a>
-        <a href="#give" data-route="give" class="btn btn--accent btn--lg">Give Online</a>
+  <!-- CTA -->
+  <section class="cta" id="home-cta">
+    <img class="cta__bg" src="assets/images/hero-sanctuary.jpg" alt="" loading="lazy">
+    <div class="container cta__inner" data-reveal>
+      <p class="eyebrow eyebrow--light">Join Us This Sunday</p>
+      <h2>There's always room at the table.</h2>
+      <p>Whether it's your first visit or your hundredth, we'd love to see you.<br>Sunday Worship at 10:00 AM &middot; 14200 1st Avenue South, Burien</p>
+      <div class="btn-row btn-row--center">
+        <a href="#visit" data-route="visit" data-subtab="visit" class="btn btn--light">Plan Your Visit</a>
+        <a href="#give" data-route="give" class="btn btn--ghost-light">Give Online</a>
       </div>
     </div>
   </section>
@@ -247,65 +324,59 @@
 <div id="view-about" class="page-view">
   <section class="page-header">
     <div class="container">
-      <p class="section-label">Our Church</p>
+      <p class="eyebrow eyebrow--light">Our Church</p>
       <h1>About Us</h1>
-      <p>A multicultural body of Christ committed to the Word of God and loving all people.</p>
+      <p>A multicultural body of Christ committed to the Word of God and to loving all people.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <!-- Mission & Vision -->
-      <div class="mv-grid" style="margin-bottom:var(--space-2xl);">
+      <div class="mv-grid">
         <div class="mv-block">
-          <div class="mv-block__label">Our Mission</div>
-          <h3>Restoring People and Releasing Their Potential</h3>
+          <p class="eyebrow">Our Mission</p>
+          <h2>Restoring people and releasing their potential</h2>
           <p>By connecting them to God through sound biblical teaching, community, and the transforming power of the Holy Spirit.</p>
         </div>
         <div class="mv-block">
-          <div class="mv-block__label">Our Vision</div>
-          <h3>Expose, Enable, Equip, and Enrich</h3>
+          <p class="eyebrow">Our Vision</p>
+          <h2>Expose, Enable, Equip, and Enrich</h2>
           <p>We aim to expose people to the truth of God's Word, enable them to grow, equip them for service, and enrich their lives and communities.</p>
         </div>
       </div>
-
-      <!-- Core Values -->
-      <div class="section-intro centered">
-        <p class="section-label">What We Stand On</p>
-        <h2>Core Values</h2>
-      </div>
-      <div class="values-row" style="margin-bottom:var(--space-2xl);">
-        <div class="value-item">
-          <div class="value-item__icon">✝️</div>
-          <h4>Grace</h4>
-          <p>Salvation is by grace through faith in Jesus Christ — both justifying and empowering.</p>
-        </div>
-        <div class="value-item">
-          <div class="value-item__icon">📖</div>
-          <h4>The Word</h4>
-          <p>The Bible is God's inspired truth — our highest authority for life and practice.</p>
-        </div>
-        <div class="value-item">
-          <div class="value-item__icon">🌍</div>
-          <h4>All Nations</h4>
-          <p>Celebrating the beauty of every tribe, ethnicity, and generation as one family.</p>
-        </div>
-        <div class="value-item">
-          <div class="value-item__icon">🔥</div>
-          <h4>Prayer</h4>
-          <p>Seeking God's presence, power, and breakthrough through corporate intercession.</p>
-        </div>
-      </div>
-
-      <!-- Leadership -->
-      <div class="section-intro centered">
-        <p class="section-label">Leadership</p>
-        <h2>Our Pastoral Team</h2>
-        <p>Servant-leaders dedicated to prayer, pastoral care, and equipping God's people.</p>
-      </div>
-      <div class="leaders-grid" id="leaderGrid"></div>
     </div>
   </section>
+
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">What We Stand On</p>
+          <h2>Core values</h2>
+        </div>
+      </div>
+      <ol class="values">
+        <li><span class="values__num">01</span><h3>Grace</h3><p>Salvation is by grace through faith in Jesus Christ, both justifying and empowering.</p></li>
+        <li><span class="values__num">02</span><h3>The Word</h3><p>The Bible is God's inspired truth and our highest authority for life and practice.</p></li>
+        <li><span class="values__num">03</span><h3>All Nations</h3><p>We celebrate every tribe, ethnicity, and generation as one family in Christ.</p></li>
+        <li><span class="values__num">04</span><h3>Prayer</h3><p>We seek God's presence, power, and breakthrough through praying together.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="leadership">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Leadership</p>
+          <h2>Our pastoral team</h2>
+        </div>
+        <p class="section-head__aside">Servant-leaders dedicated to prayer, pastoral care, and equipping God's people.</p>
+      </div>
+      <div class="leaders" id="leaderGrid"></div>
+    </div>
+  </section>
+
 </div>
 
 
@@ -315,14 +386,14 @@
 <div id="view-ministries" class="page-view">
   <section class="page-header">
     <div class="container">
-      <p class="section-label">Get Involved</p>
+      <p class="eyebrow eyebrow--light">Get Involved</p>
       <h1>Ministries</h1>
       <p>There is a ministry for every season of life. Find yours and start serving.</p>
     </div>
   </section>
   <section class="section">
     <div class="container">
-      <div class="ministries-grid" id="allMinistriesGrid"></div>
+      <div class="ministry-rows" id="allMinistriesGrid"></div>
     </div>
   </section>
 </div>
@@ -334,60 +405,34 @@
 <div id="view-sermons" class="page-view">
   <section class="page-header">
     <div class="container">
-      <p class="section-label">Listen &amp; Learn</p>
+      <p class="eyebrow eyebrow--light">Listen &amp; Learn</p>
       <h1>Sermons</h1>
       <p>Listen to recent messages and be encouraged by God's Word.</p>
     </div>
   </section>
   <section class="section">
     <div class="container">
-      <div class="sermon-featured" style="margin-bottom:var(--space-xl);">
-        <div class="sermon-featured__media">
-          <img src="assets/images/hero-sanctuary.jpg" alt="Featured Sermon">
-          <div class="sermon-featured__play play-sermon" data-id="sermon-1">
-            <div class="play-btn-circle"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-        </div>
-        <div class="sermon-featured__info">
-          <div class="sermon-featured__series">Latest</div>
-          <h3 class="sermon-featured__title">Walking in Supernatural Grace</h3>
-          <div class="sermon-featured__meta"><span>Pastor Emmanuel Osei</span><span>Ephesians 2:8-10</span><span>42 min</span></div>
-          <p class="sermon-featured__desc">Grace is God's empowering presence — enabling you to do what you could never do on your own.</p>
-          <div class="sermon-featured__actions">
-            <button class="btn btn--white btn--sm play-sermon" data-id="sermon-1">Play Audio</button>
-            <button class="btn btn--outline btn--sm view-notes" data-id="sermon-1" style="color:#fff;border-color:rgba(255,255,255,0.3);">Study Notes</button>
+      <div class="latest latest--large">
+        <button class="latest__media play-sermon" data-id="sermon-1" aria-label="Play: Walking in Supernatural Grace">
+          <img src="assets/images/hero-sanctuary.jpg" alt="">
+          <span class="play-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <div class="latest__info">
+          <p class="eyebrow">Latest &middot; Unshakable Kingdom</p>
+          <h2>Walking in Supernatural Grace</h2>
+          <p class="meta-line">Pastor Emmanuel Osei <span>Ephesians 2:8–10</span> <span>42 min</span></p>
+          <p>Grace is God's empowering presence, enabling you to do what you could never do on your own.</p>
+          <div class="btn-row">
+            <button class="btn btn--primary btn--sm play-sermon" data-id="sermon-1">Play audio</button>
+            <button class="btn btn--outline btn--sm view-notes" data-id="sermon-1">Study notes</button>
           </div>
         </div>
       </div>
 
-      <h3 style="margin-bottom:var(--space-md);">Recent Messages</h3>
-      <div class="sermon-grid" id="sermonsGrid"></div>
-    </div>
-  </section>
-</div>
-
-
-<!-- ============================================================
-     EVENTS
-     ============================================================ -->
-<div id="view-events" class="page-view">
-  <section class="page-header">
-    <div class="container">
-      <p class="section-label">What's Happening</p>
-      <h1>Events</h1>
-      <p>Mark your calendar for upcoming services, conferences, outreaches, and gatherings.</p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <div class="filter-bar events-filters">
-        <button class="filter-btn active" data-filter="All">All</button>
-        <button class="filter-btn" data-filter="Conference">Conferences</button>
-        <button class="filter-btn" data-filter="Worship">Worship</button>
-        <button class="filter-btn" data-filter="Outreach">Outreach</button>
-        <button class="filter-btn" data-filter="Youth">Youth</button>
+      <div class="section-head section-head--spaced">
+        <div><h2 class="h3">Recent messages</h2></div>
       </div>
-      <div class="events-list" id="eventsList"></div>
+      <ul class="sermon-list" id="sermonsGrid"></ul>
     </div>
   </section>
 </div>
@@ -399,21 +444,38 @@
 <div id="view-gallery" class="page-view">
   <section class="page-header">
     <div class="container">
-      <p class="section-label">Moments</p>
+      <p class="eyebrow eyebrow--light">Moments</p>
       <h1>Gallery</h1>
-      <p>Snapshots of worship, community, and ministry at House of Grace.</p>
+      <p>Worship, community, and celebration at House of Grace.</p>
     </div>
   </section>
   <section class="section">
     <div class="container">
-      <div class="filter-bar gallery-filters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="worship">Worship</button>
-        <button class="filter-btn" data-category="services">Services</button>
-        <button class="filter-btn" data-category="community">Community</button>
-        <button class="filter-btn" data-category="youth">Youth &amp; Kids</button>
+      <!-- Album folders -->
+      <div id="albumIndex">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Photo Albums</p>
+            <h2>Moments from our church family</h2>
+          </div>
+          <p class="section-head__aside">Albums are for our church family. Ask a church leader for the password.</p>
+        </div>
+        <ul class="albums" id="albumGrid"></ul>
       </div>
-      <div class="gallery-grid" id="galleryGrid"></div>
+
+      <!-- Open album -->
+      <div class="album-view" id="albumView" hidden>
+        <button class="album-view__back" id="albumBack">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          All albums
+        </button>
+        <div class="album-view__head">
+          <p class="eyebrow" id="albumDate"></p>
+          <h2 id="albumTitle"></h2>
+          <p class="album-view__count" id="albumCount"></p>
+        </div>
+        <div class="collage" id="albumCollage"></div>
+      </div>
     </div>
   </section>
 </div>
@@ -425,107 +487,96 @@
 <div id="view-give" class="page-view">
   <section class="page-header">
     <div class="container">
-      <p class="section-label">Generosity</p>
+      <p class="eyebrow eyebrow--light">Generosity</p>
       <h1>Give</h1>
-      <p>"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." — 2 Corinthians 9:7</p>
+      <p class="page-header__verse">“Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.” <cite>2 Corinthians 9:7</cite></p>
     </div>
   </section>
   <section class="section">
-    <div class="container">
-      <div class="give-layout">
-        <!-- Info -->
-        <div class="give-info">
-          <h3>Your Giving Makes an Impact</h3>
-          <p class="give-info__scripture">"Bring the whole tithe into the storehouse, that there may be food in my house." — Malachi 3:10</p>
+    <div class="container give-layout">
+      <div class="give-info">
+        <h2>Your giving makes an impact</h2>
+        <p class="give-info__scripture">“Bring the whole tithe into the storehouse, that there may be food in my house.” <cite>Malachi 3:10</cite></p>
 
-          <div class="give-info__list">
-            <div class="give-info__item">
-              <div class="give-info__item-icon">🌟</div>
-              <div>
-                <h4>Gospel &amp; Media Ministry</h4>
-                <p>Weekly broadcasts and community outreach across Washington state.</p>
-              </div>
-            </div>
-            <div class="give-info__item">
-              <div class="give-info__item-icon">🍞</div>
-              <div>
-                <h4>Compassion &amp; Food Drives</h4>
-                <p>Hot meals, groceries, and essentials for families in need.</p>
-              </div>
-            </div>
-            <div class="give-info__item">
-              <div class="give-info__item-icon">🏫</div>
-              <div>
-                <h4>Kids &amp; Youth</h4>
-                <p>Curriculum, mentors, retreats, and safe spaces for the next generation.</p>
-              </div>
-            </div>
+        <ul class="give-info__list">
+          <li>
+            <h3>Gospel &amp; Media Ministry</h3>
+            <p>Weekly broadcasts and community outreach across Washington state.</p>
+          </li>
+          <li>
+            <h3>Compassion &amp; Food Drives</h3>
+            <p>Hot meals, groceries, and essentials for families in need.</p>
+          </li>
+          <li>
+            <h3>Kids &amp; Youth</h3>
+            <p>Curriculum, mentors, retreats, and safe spaces for the next generation.</p>
+          </li>
+        </ul>
+
+        <div class="give-alt">
+          <h3 class="label">Other ways to give</h3>
+          <dl>
+            <div><dt>Cash App</dt><dd>$ANCNWGrace</dd></div>
+            <div><dt>Zelle</dt><dd>give@ancnw.org</dd></div>
+            <div><dt>By mail</dt><dd>14200 1st Ave S, Burien, WA 98168</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="panel give-form">
+        <h2 class="h3">Select your gift</h2>
+
+        <div class="freq-toggle" role="group" aria-label="Frequency">
+          <button class="freq-btn active" data-freq="One-Time">One-time</button>
+          <button class="freq-btn" data-freq="Weekly">Weekly</button>
+          <button class="freq-btn" data-freq="Bi-Weekly">Bi-weekly</button>
+          <button class="freq-btn" data-freq="Monthly">Monthly</button>
+        </div>
+
+        <div class="form-group">
+          <span class="form-label">Amount</span>
+          <div class="amounts-grid">
+            <button class="amount-chip" data-amount="25">$25</button>
+            <button class="amount-chip" data-amount="50">$50</button>
+            <button class="amount-chip active" data-amount="100">$100</button>
+            <button class="amount-chip" data-amount="250">$250</button>
+            <button class="amount-chip" data-amount="500">$500</button>
+            <button class="amount-chip" data-amount="1000">$1,000</button>
           </div>
-
-          <div class="give-alt-methods">
-            <h4>Other Ways to Give</h4>
-            <div class="give-alt-row"><span>Cash App</span><strong>$ANCNWGrace</strong></div>
-            <div class="give-alt-row"><span>Zelle</span><strong>give@ancnw.org</strong></div>
-            <div class="give-alt-row"><span>By Mail</span><strong>14200 1st Ave S, Burien, WA 98168</strong></div>
+          <div class="custom-input-wrap">
+            <span class="prefix">$</span>
+            <input type="number" min="1" class="form-input form-input--dollar" id="customAmount" placeholder="Other amount" aria-label="Other amount">
           </div>
         </div>
 
-        <!-- Form -->
-        <div class="give-form">
-          <h3>Select Your Gift</h3>
-
-          <div class="freq-toggle">
-            <button class="freq-btn active" data-freq="One-Time">One-Time</button>
-            <button class="freq-btn" data-freq="Weekly">Weekly</button>
-            <button class="freq-btn" data-freq="Bi-Weekly">Bi-Weekly</button>
-            <button class="freq-btn" data-freq="Monthly">Monthly</button>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Amount</label>
-            <div class="amounts-grid">
-              <button class="amount-chip" data-amount="25">$25</button>
-              <button class="amount-chip" data-amount="50">$50</button>
-              <button class="amount-chip active" data-amount="100">$100</button>
-              <button class="amount-chip" data-amount="250">$250</button>
-              <button class="amount-chip" data-amount="500">$500</button>
-              <button class="amount-chip" data-amount="1000">$1,000</button>
-            </div>
-            <div class="custom-input-wrap">
-              <span class="prefix">$</span>
-              <input type="number" class="form-input form-input--dollar" id="customAmount" placeholder="Custom amount">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="fundSelect">Designate to</label>
-            <select class="form-select" id="fundSelect">
-              <option>Tithes &amp; General</option>
-              <option>Building Fund</option>
-              <option>Outreach &amp; Food Pantry</option>
-              <option>Missions</option>
-              <option>Benevolence</option>
-            </select>
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
-            <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" id="giveName" placeholder="John Doe"></div>
-            <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" id="giveEmail" placeholder="john@example.com"></div>
-          </div>
-
-          <div class="fee-row">
-            <input type="checkbox" id="feeCheck">
-            <label for="feeCheck">Add 2.2% to cover processing so 100% goes to ministry</label>
-          </div>
-
-          <div class="give-total-box">
-            <span class="give-total-label">Total:</span>
-            <span class="give-total-amount" id="giveTotal">$100.00</span>
-          </div>
-
-          <button class="btn btn--primary btn--lg btn--full" id="giveSubmitBtn">Complete Contribution</button>
-          <p style="text-align:center;font-size:0.72rem;color:var(--gray-400);margin-top:0.75rem;">SSL Encrypted · 501(c)(3) Tax Deductible</p>
+        <div class="form-group">
+          <label class="form-label" for="fundSelect">Designate to</label>
+          <select class="form-select" id="fundSelect">
+            <option>Tithes &amp; General</option>
+            <option>Building Fund</option>
+            <option>Outreach &amp; Food Pantry</option>
+            <option>Missions</option>
+            <option>Benevolence</option>
+          </select>
         </div>
+
+        <div class="form-row">
+          <div class="form-group"><label class="form-label" for="giveName">Full name</label><input type="text" class="form-input" id="giveName" autocomplete="name"></div>
+          <div class="form-group"><label class="form-label" for="giveEmail">Email</label><input type="email" class="form-input" id="giveEmail" autocomplete="email"></div>
+        </div>
+
+        <label class="check-row" for="feeCheck">
+          <input type="checkbox" id="feeCheck">
+          <span>Add 2.2% to cover processing so 100% goes to ministry</span>
+        </label>
+
+        <div class="give-total">
+          <span>Total</span>
+          <strong id="giveTotal">$100.00</strong>
+        </div>
+
+        <button class="btn btn--primary btn--full" id="giveSubmitBtn">Complete Contribution</button>
+        <p class="fine-print">SSL encrypted &middot; 501(c)(3) tax deductible</p>
       </div>
     </div>
   </section>
@@ -533,55 +584,58 @@
 
 
 <!-- ============================================================
-     CONNECT
+     PLAN YOUR VISIT / CONNECT
      ============================================================ -->
-<div id="view-connect" class="page-view">
+<div id="view-visit" class="page-view">
   <section class="page-header">
     <div class="container">
-      <p class="section-label">Find Community</p>
-      <h1>Connect</h1>
-      <p>Church is more than a Sunday service — it's doing life together.</p>
+      <p class="eyebrow eyebrow--light">I'm New</p>
+      <h1>Plan Your Visit</h1>
+      <p>Church is more than a Sunday service. It's doing life together, and it starts with a first visit.</p>
     </div>
   </section>
+
+  <div class="visit-facts">
+    <div class="container visit-facts__grid">
+      <div><span class="label">When</span>Sundays at 10:00 AM</div>
+      <div><span class="label">Where</span>14200 1st Ave S, Burien</div>
+      <div><span class="label">How long</span>About 90 minutes</div>
+      <div><span class="label">Kids</span>Nursery – 5th grade</div>
+    </div>
+  </div>
+
   <section class="section">
     <div class="container">
-      <div class="tab-nav">
-        <button class="tab-btn active" data-tab="visit">Plan Your Visit</button>
-        <button class="tab-btn" data-tab="card">Connect Card</button>
-        <button class="tab-btn" data-tab="groups">Life Groups</button>
-        <button class="tab-btn" data-tab="faq">FAQ</button>
+      <div class="tab-nav" role="tablist">
+        <button class="tab-btn active" data-tab="visit" role="tab">Your First Sunday</button>
+        <button class="tab-btn" data-tab="card" role="tab">Connect Card</button>
+        <button class="tab-btn" data-tab="groups" role="tab">Life Groups</button>
+        <button class="tab-btn" data-tab="faq" role="tab">FAQ</button>
       </div>
 
       <!-- Visit -->
       <div class="tab-panel active" id="panel-visit">
         <div class="visit-layout">
-          <div class="visit-steps">
-            <div class="visit-step">
-              <div class="visit-step__num">1</div>
-              <div><h4>Visitor Parking</h4><p>Our parking team will direct you to reserved visitor spaces at the main entrance.</p></div>
-            </div>
-            <div class="visit-step">
-              <div class="visit-step__num">2</div>
-              <div><h4>Welcome Lounge</h4><p>Stop by for complimentary coffee, pastries, and a welcome gift from our hospitality team.</p></div>
-            </div>
-            <div class="visit-step">
-              <div class="visit-step__num">3</div>
-              <div><h4>Kids Check-In</h4><p>Kingdom Kids provides safe, age-appropriate ministry for nursery through 5th grade.</p></div>
-            </div>
-            <div class="visit-step">
-              <div class="visit-step__num">4</div>
-              <div><h4>Sunday Service at 10:00 AM</h4><p>About 90 minutes of worship, biblical teaching, and prayer in a warm atmosphere.</p></div>
-            </div>
+          <div>
+            <h2 class="h3">What to expect</h2>
+            <ol class="steps">
+              <li><h3>Visitor parking</h3><p>Our parking team will direct you to reserved visitor spaces at the main entrance.</p></li>
+              <li><h3>Welcome lounge</h3><p>Stop by for coffee, pastries, and a small welcome gift from our hospitality team.</p></li>
+              <li><h3>Kids check-in</h3><p>Kingdom Kids provides safe, age-appropriate ministry for nursery through 5th grade.</p></li>
+              <li><h3>Sunday service at 10:00 AM</h3><p>About 90 minutes of worship, biblical teaching, and prayer.</p></li>
+            </ol>
           </div>
-          <div class="connect-form-box">
-            <h3>Let Us Know You're Coming</h3>
-            <p style="color:var(--gray-600);font-size:0.88rem;margin-bottom:var(--space-md);">Pre-register and our team will meet you at the door.</p>
+          <div class="panel">
+            <h2 class="h3">Let us know you're coming</h2>
+            <p class="panel__intro">Pre-register and someone from our team will meet you at the door.</p>
             <form id="planVisitForm">
-              <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" required></div>
-              <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" required></div>
-              <div class="form-group"><label class="form-label">Date of Visit</label><input type="date" class="form-input" required></div>
-              <div class="form-group"><label class="form-label">Party Size</label>
-                <select class="form-select"><option>1 (Just Me)</option><option>2</option><option>3–4</option><option>5+</option></select>
+              <div class="form-group"><label class="form-label" for="pv-name">Name</label><input id="pv-name" type="text" class="form-input" required autocomplete="name"></div>
+              <div class="form-group"><label class="form-label" for="pv-email">Email</label><input id="pv-email" type="email" class="form-input" required autocomplete="email"></div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label" for="pv-date">Date of visit</label><input id="pv-date" type="date" class="form-input" required></div>
+                <div class="form-group"><label class="form-label" for="pv-size">Party size</label>
+                  <select id="pv-size" class="form-select"><option>1 (just me)</option><option>2</option><option>3–4</option><option>5+</option></select>
+                </div>
               </div>
               <button type="submit" class="btn btn--primary btn--full">Plan My Visit</button>
             </form>
@@ -591,38 +645,38 @@
 
       <!-- Connect Card -->
       <div class="tab-panel" id="panel-card">
-        <div class="connect-form-box" style="max-width:640px;margin:0 auto;">
-          <h3>Digital Connect Card</h3>
-          <p style="color:var(--gray-600);font-size:0.88rem;margin-bottom:var(--space-md);">Whether it's your first time or you're ready for a next step.</p>
+        <div class="panel panel--narrow">
+          <h2 class="h3">Digital connect card</h2>
+          <p class="panel__intro">Whether it's your first time or you're ready for a next step.</p>
           <form id="connectCardForm">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
-              <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" required></div>
-              <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" required></div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="cc-first">First name</label><input id="cc-first" type="text" class="form-input" required></div>
+              <div class="form-group"><label class="form-label" for="cc-last">Last name</label><input id="cc-last" type="text" class="form-input" required></div>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
-              <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" required></div>
-              <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input"></div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="cc-email">Email</label><input id="cc-email" type="email" class="form-input" required></div>
+              <div class="form-group"><label class="form-label" for="cc-phone">Phone</label><input id="cc-phone" type="tel" class="form-input"></div>
             </div>
-            <div class="form-group">
-              <label class="form-label">I am</label>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.35rem;font-size:0.88rem;">
-                <label><input type="radio" name="status" checked> First-Time Guest</label>
-                <label><input type="radio" name="status"> Returning Guest</label>
-                <label><input type="radio" name="status"> Active Member</label>
+            <fieldset class="form-group">
+              <legend class="form-label">I am</legend>
+              <div class="choice-grid">
+                <label><input type="radio" name="status" checked> First-time guest</label>
+                <label><input type="radio" name="status"> Returning guest</label>
+                <label><input type="radio" name="status"> Active member</label>
                 <label><input type="radio" name="status"> New to Seattle</label>
               </div>
-            </div>
-            <div class="form-group" style="margin-top:0.75rem;">
-              <label class="form-label">Next Steps</label>
-              <div style="display:flex;flex-direction:column;gap:0.3rem;font-size:0.85rem;">
+            </fieldset>
+            <fieldset class="form-group">
+              <legend class="form-label">Next steps</legend>
+              <div class="choice-list">
                 <label><input type="checkbox"> I made a decision to follow Jesus</label>
                 <label><input type="checkbox"> I want to be baptized</label>
                 <label><input type="checkbox"> I'd like to join a Life Group</label>
                 <label><input type="checkbox"> I want to volunteer</label>
                 <label><input type="checkbox"> I'd like to speak with a pastor</label>
               </div>
-            </div>
-            <div class="form-group"><label class="form-label">Prayer Requests or Notes</label><textarea class="form-textarea" rows="3" placeholder="How can we pray for you?"></textarea></div>
+            </fieldset>
+            <div class="form-group"><label class="form-label" for="cc-notes">Prayer requests or notes</label><textarea id="cc-notes" class="form-textarea" rows="3" placeholder="How can we pray for you?"></textarea></div>
             <button type="submit" class="btn btn--primary btn--full">Submit</button>
           </form>
         </div>
@@ -630,18 +684,19 @@
 
       <!-- Life Groups -->
       <div class="tab-panel" id="panel-groups">
-        <div class="section-intro centered">
-          <p class="section-label">Life Together</p>
-          <h2>Join a Life Group</h2>
-          <p>Weekly small groups meeting in homes, cafes, and online across the Seattle area.</p>
+        <div class="section-head">
+          <div>
+            <h2 class="h3">Join a life group</h2>
+          </div>
+          <p class="section-head__aside">Weekly small groups meeting in homes, cafés, and online across the Seattle area.</p>
         </div>
-        <div class="lifegroups-grid" id="lifegroupsGrid"></div>
+        <ul class="groups" id="lifegroupsGrid"></ul>
       </div>
 
       <!-- FAQ -->
       <div class="tab-panel" id="panel-faq">
-        <div style="max-width:700px;margin:0 auto;">
-          <div class="section-intro centered"><h2>Frequently Asked Questions</h2></div>
+        <div class="faq-wrap">
+          <h2 class="h3">Frequently asked questions</h2>
           <div class="faq-list" id="faqList"></div>
         </div>
       </div>
@@ -656,81 +711,73 @@
 <div id="view-contact" class="page-view">
   <section class="page-header">
     <div class="container">
-      <p class="section-label">Reach Out</p>
+      <p class="eyebrow eyebrow--light">Reach Out</p>
       <h1>Contact Us</h1>
-      <p>We'd love to hear from you — whether it's a question, prayer need, or just a hello.</p>
+      <p>We'd love to hear from you, whether it's a question, a prayer need, or just a hello.</p>
     </div>
   </section>
   <section class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-sidebar">
-          <h3>Church Office</h3>
-          <div class="contact-list">
-            <div class="contact-list__item">
-              <span class="contact-list__icon">📍</span>
-              <div><h4>Address</h4><p>14200 1st Avenue South<br>Seattle / Burien, WA 98168</p></div>
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h2 class="h3">Church office</h2>
+        <dl class="contact-list">
+          <div><dt>Address</dt><dd>14200 1st Avenue South<br>Burien, WA 98168</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+12065554722">(206) 555-4722</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:info@ancnw.org">info@ancnw.org</a></dd></div>
+          <div><dt>Office hours</dt><dd>Tuesday – Friday, 9 AM – 5 PM</dd></div>
+        </dl>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86280.95764023772!2d-122.38128362704381!3d47.48006612197176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54904323204791a9%3A0xe9f79b6dca50a9d4!2sBurien%2C%20WA!5e0!3m2!1sen!2sus" loading="lazy" title="Map of Burien, WA"></iframe>
+        </div>
+      </div>
+
+      <div class="contact-forms">
+        <div class="panel">
+          <h2 class="h3">Send a message</h2>
+          <p class="panel__intro">We'll get back to you as soon as we can.</p>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="ct-name">Name</label><input id="ct-name" type="text" class="form-input" required autocomplete="name"></div>
+              <div class="form-group"><label class="form-label" for="ct-email">Email</label><input id="ct-email" type="email" class="form-input" required autocomplete="email"></div>
             </div>
-            <div class="contact-list__item">
-              <span class="contact-list__icon">📞</span>
-              <div><h4>Phone</h4><p>(206) 555-4722</p></div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="ct-phone">Phone</label><input id="ct-phone" type="tel" class="form-input" autocomplete="tel"></div>
+              <div class="form-group"><label class="form-label" for="ct-subject">Subject</label>
+                <select id="ct-subject" class="form-select"><option>General</option><option>Pastoral Counseling</option><option>Baptism</option><option>Baby Dedication</option><option>Facility Rental</option></select>
+              </div>
             </div>
-            <div class="contact-list__item">
-              <span class="contact-list__icon">✉️</span>
-              <div><h4>Email</h4><p>info@ancnw.org</p></div>
-            </div>
-            <div class="contact-list__item">
-              <span class="contact-list__icon">⏰</span>
-              <div><h4>Office Hours</h4><p>Tue – Fri: 9 AM – 5 PM</p></div>
-            </div>
-          </div>
-          <div class="contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86280.95764023772!2d-122.38128362704381!3d47.48006612197176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54904323204791a9%3A0xe9f79b6dca50a9d4!2sBurien%2C%20WA!5e0!3m2!1sen!2sus" loading="lazy" title="Location Map"></iframe>
-          </div>
+            <div class="form-group"><label class="form-label" for="ct-msg">Message</label><textarea id="ct-msg" class="form-textarea" rows="4" required></textarea></div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          </form>
         </div>
 
-        <div class="contact-forms">
-          <div class="contact-form-card">
-            <h3>Send a Message</h3>
-            <p style="color:var(--gray-600);font-size:0.88rem;margin-bottom:var(--space-md);">We'll get back to you as soon as possible.</p>
-            <form id="contactForm">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
-                <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" required></div>
-                <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" required></div>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
-                <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input"></div>
-                <div class="form-group"><label class="form-label">Subject</label>
-                  <select class="form-select"><option>General</option><option>Pastoral Counseling</option><option>Baptism</option><option>Baby Dedication</option><option>Facility Rental</option></select>
-                </div>
-              </div>
-              <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" rows="4" required></textarea></div>
-              <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-            </form>
-          </div>
-
-          <div class="contact-form-card">
-            <h3>Prayer Request</h3>
-            <p style="color:var(--gray-600);font-size:0.85rem;margin-bottom:var(--space-sm);">Our prayer team intercedes over every request.</p>
-            <form id="prayerForm">
-              <div class="form-group"><textarea class="form-textarea" rows="3" placeholder="Share your prayer need…" required></textarea></div>
-              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
-                <label style="font-size:0.78rem;color:var(--gray-400);"><input type="checkbox" checked> Keep confidential</label>
-                <button type="submit" class="btn btn--outline btn--sm">Submit Prayer</button>
-              </div>
-            </form>
-          </div>
+        <div class="panel panel--sand">
+          <h2 class="h3">Prayer request</h2>
+          <p class="panel__intro">Our prayer team prays over every request we receive.</p>
+          <form id="prayerForm">
+            <div class="form-group"><label class="visually-hidden" for="pr-text">Prayer request</label><textarea id="pr-text" class="form-textarea" rows="3" placeholder="Share your prayer need…" required></textarea></div>
+            <div class="prayer-actions">
+              <label class="check-row"><input type="checkbox" checked> <span>Keep confidential</span></label>
+              <button type="submit" class="btn btn--outline btn--sm">Submit Prayer</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </section>
 </div>
 
+</main>
+
+
+<!-- Section dots (home only) -->
+<nav class="dot-nav" id="dotNav" aria-label="Page sections"></nav>
+
 
 <!-- ============================================================
      AUDIO PLAYER BAR
      ============================================================ -->
-<div class="audio-bar" id="audioBar">
+<div class="audio-bar" id="audioBar" aria-label="Sermon player">
   <div class="audio-bar__track">
     <img src="assets/images/hero-sanctuary.jpg" alt="" id="audioThumb" class="audio-bar__thumb">
     <div>
@@ -739,18 +786,16 @@
     </div>
   </div>
   <div class="audio-bar__controls">
-    <div class="audio-bar__buttons">
-      <button class="audio-bar__btn audio-bar__play" id="audioPlayBtn">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-    </div>
+    <button class="audio-bar__play" id="audioPlayBtn" aria-label="Play or pause">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </button>
     <div class="audio-bar__progress">
       <span id="audioTime">0:00</span>
       <div class="audio-bar__scrubber" id="audioScrubber"><div class="audio-bar__filled" id="audioFilled"></div></div>
       <span id="audioDuration">0:00</span>
     </div>
   </div>
-  <button class="audio-bar__close" id="audioCloseBtn">&times;</button>
+  <button class="audio-bar__close" id="audioCloseBtn" aria-label="Close player">&times;</button>
 </div>
 
 
@@ -760,15 +805,15 @@
 
 <!-- RSVP -->
 <div class="modal-overlay" id="rsvpModal">
-  <div class="modal">
-    <div class="modal__header"><h3 id="rsvpEventTitle">Register</h3><button class="modal__close">&times;</button></div>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="rsvpEventTitle">
+    <div class="modal__header"><div><p class="eyebrow">Register</p><h3 id="rsvpEventTitle">Register</h3></div><button class="modal__close" aria-label="Close">&times;</button></div>
     <div class="modal__body">
       <form id="rsvpForm">
         <input type="hidden" id="rsvpHiddenEvent">
-        <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" required></div>
-        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" required></div>
-        <div class="form-group"><label class="form-label">Attendees</label><select class="form-select"><option>1</option><option>2</option><option>3–4</option><option>5+</option></select></div>
-        <button type="submit" class="btn btn--primary btn--full" style="margin-top:0.75rem;">Register</button>
+        <div class="form-group"><label class="form-label" for="rs-name">Name</label><input id="rs-name" type="text" class="form-input" required></div>
+        <div class="form-group"><label class="form-label" for="rs-email">Email</label><input id="rs-email" type="email" class="form-input" required></div>
+        <div class="form-group"><label class="form-label" for="rs-count">Attendees</label><select id="rs-count" class="form-select"><option>1</option><option>2</option><option>3–4</option><option>5+</option></select></div>
+        <button type="submit" class="btn btn--primary btn--full">Register</button>
       </form>
     </div>
   </div>
@@ -776,78 +821,104 @@
 
 <!-- Receipt -->
 <div class="modal-overlay" id="receiptModal">
-  <div class="modal">
-    <div class="modal__header"><h3>Donation Receipt</h3><button class="modal__close">&times;</button></div>
-    <div class="modal__body" style="text-align:center;">
-      <div style="font-size:2rem;margin-bottom:0.5rem;">✓</div>
-      <h4 style="margin-bottom:0.25rem;">Contribution Confirmed</h4>
-      <p style="font-size:0.85rem;margin-bottom:var(--space-md);">A receipt has been sent to your email.</p>
-      <div style="background:var(--off-white);border-radius:var(--radius-sm);padding:1rem;text-align:left;font-size:0.82rem;display:flex;flex-direction:column;gap:0.4rem;margin-bottom:var(--space-md);">
-        <div style="display:flex;justify-content:space-between;"><span>Donor:</span><strong id="receiptName">—</strong></div>
-        <div style="display:flex;justify-content:space-between;"><span>Ref #:</span><strong id="receiptRef" style="font-family:monospace;">—</strong></div>
-        <div style="display:flex;justify-content:space-between;"><span>Date:</span><span id="receiptDate">—</span></div>
-        <div style="display:flex;justify-content:space-between;"><span>Fund:</span><strong id="receiptFund">—</strong></div>
-        <div style="display:flex;justify-content:space-between;"><span>Frequency:</span><span id="receiptFreq">—</span></div>
-        <div style="display:flex;justify-content:space-between;border-top:1px dashed var(--gray-200);padding-top:0.4rem;font-size:1rem;color:var(--primary);"><span>Total:</span><strong id="receiptAmount">—</strong></div>
-      </div>
-      <p style="font-size:0.72rem;color:var(--gray-400);margin-bottom:var(--space-sm);">501(c)(3) tax-deductible organization.</p>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="receiptHeading">
+    <div class="modal__header"><h3 id="receiptHeading">Thank you</h3><button class="modal__close" aria-label="Close">&times;</button></div>
+    <div class="modal__body">
+      <p>Your contribution is confirmed. A receipt has been sent to your email.</p>
+      <dl class="receipt">
+        <div><dt>Donor</dt><dd id="receiptName">—</dd></div>
+        <div><dt>Reference</dt><dd id="receiptRef" class="mono">—</dd></div>
+        <div><dt>Date</dt><dd id="receiptDate">—</dd></div>
+        <div><dt>Fund</dt><dd id="receiptFund">—</dd></div>
+        <div><dt>Frequency</dt><dd id="receiptFreq">—</dd></div>
+        <div class="receipt__total"><dt>Total</dt><dd id="receiptAmount">—</dd></div>
+      </dl>
+      <p class="fine-print">All Nations Church NorthWest is a 501(c)(3) tax-deductible organization.</p>
       <button class="btn btn--primary btn--full close-modal">Done</button>
     </div>
   </div>
 </div>
 
-<!-- Lightbox -->
-<div class="modal-overlay lightbox" id="lightboxModal">
-  <button class="modal__close" style="position:absolute;top:1rem;right:1.5rem;color:#fff;font-size:1.75rem;z-index:302;">&times;</button>
-  <div class="modal">
-    <div class="lightbox-content">
-      <button class="lightbox-nav lightbox-nav--prev" id="lightboxPrev">&larr;</button>
-      <img src="" alt="Gallery" id="lightboxImg">
-      <button class="lightbox-nav lightbox-nav--next" id="lightboxNext">&rarr;</button>
-      <div class="lightbox-caption" id="lightboxCaption"></div>
+<!-- Album password -->
+<div class="modal-overlay" id="unlockModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="unlockTitle">
+    <div class="modal__header"><div><p class="eyebrow">Private Album</p><h3 id="unlockTitle">Enter password</h3></div><button class="modal__close" aria-label="Close">&times;</button></div>
+    <div class="modal__body">
+      <form id="unlockForm" autocomplete="off">
+        <div class="form-group">
+          <label class="form-label" for="unlockPassword">Album password</label>
+          <input id="unlockPassword" type="password" class="form-input" required autocomplete="off" autocapitalize="characters" spellcheck="false">
+          <p class="unlock-error" id="unlockError" role="alert"></p>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full" id="unlockSubmit">View photos</button>
+      </form>
     </div>
   </div>
 </div>
 
+<!-- Photo viewer -->
+<div class="modal-overlay viewer" id="viewerModal" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="viewer__bar">
+    <div class="viewer__info">
+      <span class="viewer__title" id="viewerTitle"></span>
+      <span class="viewer__count" id="viewerCount"></span>
+    </div>
+    <div class="viewer__actions">
+      <a class="glass-btn" id="viewerDownload" href="#" aria-label="Download photo" title="Download">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+      </a>
+      <button class="glass-btn" id="viewerClose" aria-label="Close viewer" title="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="viewer__stage" id="viewerStage">
+    <img id="viewerImg" alt="" referrerpolicy="no-referrer">
+    <span class="viewer__spinner" aria-hidden="true"></span>
+  </div>
+  <button class="glass-btn viewer__nav viewer__nav--prev" id="viewerPrev" aria-label="Previous photo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="glass-btn viewer__nav viewer__nav--next" id="viewerNext" aria-label="Next photo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</div>
+
 <!-- Sermon Notes -->
 <div class="modal-overlay" id="notesModal">
-  <div class="modal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="notesTitle">
     <div class="modal__header">
-      <div><h3 id="notesTitle">—</h3><div id="notesSeries" style="font-size:0.78rem;color:var(--gray-400);"></div></div>
-      <button class="modal__close">&times;</button>
+      <div><p class="eyebrow" id="notesSeries"></p><h3 id="notesTitle">—</h3></div>
+      <button class="modal__close" aria-label="Close">&times;</button>
     </div>
     <div class="modal__body">
-      <div id="notesScripture" style="font-weight:600;color:var(--primary);margin-bottom:0.75rem;font-size:0.88rem;"></div>
+      <p class="notes-scripture" id="notesScripture"></p>
       <div id="notesBody"></div>
-      <button class="btn btn--primary btn--full close-modal" style="margin-top:var(--space-sm);">Close</button>
+      <button class="btn btn--primary btn--full close-modal">Close</button>
     </div>
   </div>
 </div>
 
 <!-- Volunteer -->
 <div class="modal-overlay" id="volunteerModal">
-  <div class="modal">
-    <div class="modal__header"><h3>Join a Ministry Team</h3><button class="modal__close">&times;</button></div>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="volunteerHeading">
+    <div class="modal__header"><h3 id="volunteerHeading">Join a ministry team</h3><button class="modal__close" aria-label="Close">&times;</button></div>
     <div class="modal__body">
       <form id="volunteerForm">
-        <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" required></div>
-        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" required></div>
-        <div class="form-group"><label class="form-label">Ministry</label>
-          <select class="form-select" id="volunteerSelect">
-            <option>Worship Arts</option><option>Kingdom Kids</option><option>Youth</option>
-            <option>Men of Valour</option><option>Daughters of Grace</option><option>Outreach</option>
-            <option>Hospitality</option><option>Media &amp; Sound</option>
-          </select>
+        <div class="form-group"><label class="form-label" for="vo-name">Name</label><input id="vo-name" type="text" class="form-input" required></div>
+        <div class="form-group"><label class="form-label" for="vo-email">Email</label><input id="vo-email" type="email" class="form-input" required></div>
+        <div class="form-group"><label class="form-label" for="volunteerSelect">Ministry</label>
+          <select class="form-select" id="volunteerSelect"></select>
         </div>
-        <button type="submit" class="btn btn--primary btn--full" style="margin-top:0.75rem;">Submit</button>
+        <button type="submit" class="btn btn--primary btn--full">Submit</button>
       </form>
     </div>
   </div>
 </div>
 
 
-<!-- Toast Container -->
-<div class="toast-container" id="toastContainer"></div>
+<!-- Toasts -->
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
 
 <!-- ============================================================
@@ -856,64 +927,64 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <div class="header-brand" style="margin-bottom:0.5rem;">
-        <div class="header-brand-text">
-          <span class="header-brand-name" style="font-size:0.85rem;">All Nations Church</span>
-          <span class="header-brand-sub">NorthWest · House of Grace</span>
-        </div>
-      </div>
-      <p>A multicultural, Bible-believing church dedicated to the grace and hope of Jesus Christ for people of every nation.</p>
-      <div class="footer-socials">
-        <a href="https://youtube.com" target="_blank" class="social-btn" aria-label="YouTube">▶</a>
-        <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook">f</a>
-        <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram">📸</a>
+      <img src="assets/images/logo.png" alt="All Nations Church" class="footer-brand__logo" width="258" height="247" loading="lazy">
+      <p>A multicultural, Bible-believing church in Burien, sharing the grace and hope of Jesus Christ with people of every nation.</p>
+      <div class="socials">
+        <a href="https://youtube.com/@ancnorthwest" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg>
+        </a>
+        <a href="https://facebook.com/ancnorthwest" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.6V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.4H7.6V13h2.7v8h3.2z"/></svg>
+        </a>
+        <a href="https://instagram.com/ancnorthwest" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>
+        </a>
       </div>
     </div>
 
     <div>
-      <h4 class="footer-heading">Navigate</h4>
+      <h2 class="footer-heading">Service Times</h2>
+      <dl class="footer-times">
+        <div><dt>Sunday Worship</dt><dd>Sundays, 10:00 AM</dd></div>
+        <div><dt>Bible Study (Zoom)</dt><dd>1st &amp; 3rd Wednesday, 8–9 PM</dd></div>
+        <div><dt>Prayer Meeting</dt><dd>Fridays, 7–9 PM, in person</dd></div>
+      </dl>
+    </div>
+
+    <div>
+      <h2 class="footer-heading">Explore</h2>
       <ul class="footer-links">
-        <li><a href="#home" data-route="home">Home</a></li>
+        <li><a href="#visit" data-route="visit" data-subtab="visit">Plan Your Visit</a></li>
         <li><a href="#about" data-route="about">About</a></li>
         <li><a href="#ministries" data-route="ministries">Ministries</a></li>
         <li><a href="#sermons" data-route="sermons">Sermons</a></li>
-        <li><a href="#events" data-route="events">Events</a></li>
         <li><a href="#gallery" data-route="gallery">Gallery</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4 class="footer-heading">Connect</h4>
-      <ul class="footer-links">
-        <li><a href="#connect" data-route="connect" data-subtab="visit">Plan Your Visit</a></li>
-        <li><a href="#connect" data-route="connect" data-subtab="card">Connect Card</a></li>
-        <li><a href="#connect" data-route="connect" data-subtab="groups">Life Groups</a></li>
+        <li><a href="#visit" data-route="visit" data-subtab="groups">Life Groups</a></li>
         <li><a href="#give" data-route="give">Give</a></li>
-        <li><a href="#contact" data-route="contact">Contact</a></li>
       </ul>
     </div>
 
     <div>
-      <h4 class="footer-heading">Services</h4>
-      <div style="font-size:0.85rem;line-height:1.7;">
-        <p><strong style="color:#fff;">Sunday Worship:</strong> 10:00 AM</p>
-        <p><strong style="color:#fff;">Bible Study (Zoom):</strong> 1st &amp; 3rd Wed, 8–9 PM</p>
-        <p><strong style="color:#fff;">Prayer Meeting:</strong> Fridays, 7–9 PM</p>
-        <div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.08);">
-          <p>📍 14200 1st Avenue South<br>Seattle / Burien, WA 98168</p>
-          <p>📞 (206) 555-4722</p>
-        </div>
-      </div>
+      <h2 class="footer-heading">Contact</h2>
+      <address class="footer-contact">
+        14200 1st Avenue South<br>Burien, WA 98168<br>
+        <a href="tel:+12065554722">(206) 555-4722</a><br>
+        <a href="mailto:info@ancnw.org">info@ancnw.org</a>
+      </address>
+      <p class="footer-hours">Office: Tue – Fri, 9 AM – 5 PM</p>
+      <a href="#contact" data-route="contact" class="link-arrow link-arrow--light">Send us a message</a>
     </div>
   </div>
 
-  <div class="footer-bottom">
-    <div>&copy; 2026 All Nations Church NorthWest. All rights reserved.</div>
-    <div>Isaiah 56:7 — "A House of Prayer for All Nations"</div>
+  <div class="container footer-bottom">
+    <span>&copy; 2026 All Nations Church NorthWest. All rights reserved.</span>
+    <span class="footer-verse">“A house of prayer for all nations.” Isaiah 56:7</span>
   </div>
 </footer>
 
 <script src="js/data.js"></script>
 <script src="js/app.js"></script>
+<script src="js/gallery-data.js"></script>
+<script src="js/gallery.js"></script>
 </body>
 </html>

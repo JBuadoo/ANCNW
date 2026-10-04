@@ -30,14 +30,14 @@ const churchData = {
         day: "1st & 3rd Wednesday",
         time: "8:00 \u2013 9:00 PM",
         name: "Bible Study (Zoom)",
-        description: "Deep dive into scripture and interactive biblical study via Zoom every 1st and 3rd Wednesday of the month.",
+        description: "An interactive study of Scripture on Zoom, held on the 1st and 3rd Wednesday of every month from 8:00 to 9:00 PM.",
         isPrimary: false
       },
       {
         day: "Friday",
         time: "7:00 \u2013 9:00 PM",
         name: "Prayer Meeting (In Person)",
-        description: "Corporate intercession and prayer for our community, families, and the nations.",
+        description: "An in-person evening of prayer every Friday from 7:00 to 9:00 PM for our church, our families, our city, and the nations.",
         isPrimary: false
       }
     ]
@@ -45,9 +45,9 @@ const churchData = {
 
   leadership: [
     {
-      name: "Pastor Emmanuel & Pastor Grace Osei",
+      name: "Joseph Buadoo & Frank Fening",
       role: "Lead Pastors & Founders",
-      image: "assets/images/pastor-preaching.jpg",
+      image: "assets/images/pastor.jpg",
       bio: "Founding pastors with a passion to see believers from every tribe, tongue, and nation empowered to walk in God\u2019s grace and purpose."
     },
     {
@@ -202,115 +202,9 @@ const churchData = {
     }
   ],
 
-  events: [
-    {
-      id: "event-1",
-      title: "Grace & Glory Conference 2026",
-      category: "Conference",
-      date: "November 12 \u2013 15, 2026",
-      time: "Evenings at 6:30 PM",
-      location: "Main Sanctuary & Online",
-      description: "Four days of worship, impartation, healing, and prophetic revelation with guest speakers from across the globe.",
-      badge: "Flagship",
-      image: "assets/images/hero-sanctuary.jpg",
-      featured: true
-    },
-    {
-      id: "event-2",
-      title: "Night of Encounter",
-      category: "Worship",
-      date: "October 16, 2026",
-      time: "8:00 \u2013 11:30 PM",
-      location: "Sanctuary",
-      description: "An extended evening devoted to uninterrupted worship, prayer for the sick, and spiritual breakthrough.",
-      badge: "Upcoming",
-      image: "assets/images/worship-team.jpg",
-      featured: false
-    },
-    {
-      id: "event-3",
-      title: "Community Food & Coat Drive",
-      category: "Outreach",
-      date: "October 24, 2026",
-      time: "9:00 AM \u2013 1:00 PM",
-      location: "Church Grounds",
-      description: "Serving over 400 local families with fresh groceries, warm winter coats, and free prayer.",
-      badge: "Serve",
-      image: "assets/images/community-fellowship.jpg",
-      featured: false
-    },
-    {
-      id: "event-4",
-      title: "Youth Campfire & Worship",
-      category: "Youth",
-      date: "October 30, 2026",
-      time: "6:30 \u2013 9:30 PM",
-      location: "Youth Pavilion",
-      description: "Acoustic praise, real conversations on identity and purpose, and friendly competitions.",
-      badge: "Ages 13\u201325",
-      image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
-      featured: false
-    }
-  ],
-
-  gallery: [
-    {
-      id: "gal-1",
-      title: "Sunday Worship",
-      category: "worship",
-      image: "assets/images/hero-sanctuary.jpg",
-      caption: "Believers standing in heartfelt praise and reverence."
-    },
-    {
-      id: "gal-2",
-      title: "Pastoral Teaching",
-      category: "services",
-      image: "assets/images/pastor-preaching.jpg",
-      caption: "Pastor Emmanuel sharing an anointed message."
-    },
-    {
-      id: "gal-3",
-      title: "Community Fellowship",
-      category: "community",
-      image: "assets/images/community-fellowship.jpg",
-      caption: "Connecting over coffee and conversation after service."
-    },
-    {
-      id: "gal-4",
-      title: "Worship Team",
-      category: "worship",
-      image: "assets/images/worship-team.jpg",
-      caption: "The praise team leading with joy and musical excellence."
-    },
-    {
-      id: "gal-5",
-      title: "Youth Gathering",
-      category: "youth",
-      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80",
-      caption: "Youth expressing their passion for God and community."
-    },
-    {
-      id: "gal-6",
-      title: "Kingdom Kids",
-      category: "kids",
-      image: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=1000&q=80",
-      caption: "Children exploring biblical stories through play."
-    },
-    {
-      id: "gal-7",
-      title: "Baptism Service",
-      category: "services",
-      image: "https://images.unsplash.com/photo-1544427920-c49ccfb85579?auto=format&fit=crop&w=1000&q=80",
-      caption: "Celebrating new lives transformed through faith."
-    },
-    {
-      id: "gal-8",
-      title: "Outreach Day",
-      category: "community",
-      image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1000&q=80",
-      caption: "Distributing care packages to neighborhood families."
-    }
-  ],
+  // Upcoming events show on the home page and drop off after their last day.
+  // Format: { title, date: "October 16, 2026" or "November 12 – 15, 2026", time, location, description }
+  events: [],
 
   lifeGroups: [
     {
